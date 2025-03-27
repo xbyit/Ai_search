@@ -3,7 +3,7 @@
 # Ai_search
 
 Ai_search is a Flask-based backend application designed to enhance search results for documents and videos using AI processing. It integrates external search services to refine and improve the relevance of search results.
-
+'''
 ---
 
 ## 📌 Table of Contents
@@ -167,5 +167,4 @@ This project is open source. See the LICENSE file for more details.
 For questions or further information, contact the maintainer:
 
 - **Telegram:** [https://t.me/XTOOLPYCHAT](https://t.me/XTOOLPYCHAT)
-```
 
