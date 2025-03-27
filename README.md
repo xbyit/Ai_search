@@ -1,47 +1,223 @@
 
+
+
 ---
 
-Ai_search
+#Ai_search
 
-Ai_search is a Flask-based Python application that provides AI-enhanced search functionality. It integrates external search APIs with an AI processing layer to deliver enriched document and video search results.
+Ai_search is a Flask-based backend application that delivers AI-enhanced search results for documents and videos. It integrates external search services with AI processing to refine and improve the search output.
+
+
+---
 
 Table of Contents
 
+Overview
+
 Features
 
-Getting Started
-
-Prerequisites
+Tech Stack
 
 Installation
 
 Configuration
 
-Running the Application
-
+Usage
 
 API Endpoints
-
-Document Search
-
-Video Search
-
 
 Project Structure
 
 Contributing
 
+License
 
 Contact
 
 
-Features
 
-Document Search Endpoint: Processes search queries for documents.
+---
 
-Video Search Endpoint: Processes search queries for videos.
+#Overview
 
-AI-Enhanced Responses: Integrates external search results with AI processing to deliver refined results.
+Ai_search leverages Flask blueprints to provide a modular backend that supports two primary search functions:
+
+Document Search: Retrieves and processes document search results.
+
+Video Search: Retrieves and processes video search results.
+
+
+Both endpoints combine results from the external search engine (via duckduckgo-search) with AI enhancements for a more accurate and relevant response.
+
+
+---
+
+#Features
+
+AI-Enhanced Search: Combines traditional search results with AI processing.
+
+Modular Architecture: Easily extensible using Flask blueprints.
+
+Dual Search Functionality: Separate endpoints for document and video searches.
+
+External API Integration: Utilizes duckduckgo-search for querying external data sources.
+
+
+
+---
+
+#Tech Stack
+
+Backend Framework: Flask
+
+HTTP Client: requests
+
+Search Engine: duckduckgo-search
+
+Programming Language: Python 3.x
+
+
+
+---
+
+#Installation
+
+1. Clone the repository:
+
+git clone https://github.com/xbyit/Ai_search.git
+cd Ai_search
+
+
+2. Install dependencies:
+
+Make sure you have Python 3 installed. Then, run:
+
+pip install -r requirements.txt
+
+The requirements.txt includes:
+
+Flask==3.0.0
+requests==2.31.0
+duckduckgo-search==4.3
+
+
+
+
+---
+
+#Configuration
+
+Before running the application, update your configuration settings in config.py:
+
+DEBUG: Set to True for development, False for production.
+
+SEARCH_API_URL: URL of the external search API.
+
+AI_API_URL: URL of the AI processing service.
+
+
+
+---
+
+#Usage
+
+Start the application by running:
+
+python app.py
+
+The server will start on http://0.0.0.0:5000.
+
+
+---
+
+#API Endpoints
+
+Document Search
+
+Endpoint: /api/search/Document
+
+Method: POST
+
+Description: Accepts a JSON payload with a query string to fetch and enhance document search results.
+
+Request Example:
+
+{
+  "query": "example search term"
+}
+
+Response Example:
+
+{
+  "resulte": "AI processed search result"
+}
+
+
+Video Search
+
+Endpoint: /api/search/video
+
+Method: POST
+
+Description: Accepts a JSON payload with a query string to fetch and enhance video search results.
+
+Request Example:
+
+{
+  "query": "example video search term"
+}
+
+Response Example:
+
+{
+  "resulte": "AI processed search result"
+}
+
+
+For further details, please review api_routes.py.
+
+
+---
+
+Project Structure
+
+Ai_search/
+├── app.py                # Main application file initializing Flask and registering blueprints
+├── config.py             # Application configuration settings
+├── routes/
+│   └── api_routes.py     # API endpoint definitions
+└── services/
+    ├── search_service.py # Integration with external search APIs (DuckDuckGo)
+    └── ai_service.py     # AI processing of search results
+
+
+---
+
+Contributing
+
+Contributions are welcome! To report issues or propose enhancements, please open an issue or submit a pull request.
+
+
+---
+
+License
+
+This project is open source. See the LICENSE file for more details.
+
+
+---
+
+Contact
+
+For any questions or further information, please contact the maintainer:
+
+Email: your-email@example.com
+
+
+---
+
+This README provides a concise yet comprehensive overview of the Ai_search project, mirroring the professional style seen in the User-Auth-Backend repository.
+
 
 Modular Design: Built using Flask blueprints and service layers for ease of maintenance and extensibility.
 
