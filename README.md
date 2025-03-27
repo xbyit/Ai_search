@@ -1,100 +1,78 @@
 
 
+<h1 Ai_search>
 
----
-
-#Ai_search
-
-Ai_search is a Flask-based backend application that delivers AI-enhanced search results for documents and videos. It integrates external search services with AI processing to refine and improve the search output.
+Ai_search is a Flask-based backend application that enhances search results for documents and videos using AI processing. It integrates external search services to refine and improve the relevance of search results.
 
 
 ---
 
-Table of Contents
+📌 Table of Contents
 
-Overview
+📖 Overview
 
-Features
+✨ Features
 
-Tech Stack
+🛠️ Tech Stack
 
-Installation
+📥 Installation
 
-Configuration
+⚙️ Configuration
 
-Usage
+🚀 Usage
 
-API Endpoints
+📡 API Endpoints
 
-Project Structure
+📂 Project Structure
 
-Contributing
+🤝 Contributing
 
-License
+📜 License
 
-Contact
+📧 Contact['📧 Contact']
 
 
 
 ---
 
-#Overview
+<h1 📖 Overview>
 
-Ai_search leverages Flask blueprints to provide a modular backend that supports two primary search functions:
+Ai_search leverages Flask blueprints to provide a modular backend supporting two main search functionalities:
 
-Document Search: Retrieves and processes document search results.
+Document Search: Fetches and enhances search results related to documents.
 
-Video Search: Retrieves and processes video search results.
-
-
-Both endpoints combine results from the external search engine (via duckduckgo-search) with AI enhancements for a more accurate and relevant response.
+Video Search: Fetches and enhances search results related to videos.
 
 
----
-
-#Features
-
-AI-Enhanced Search: Combines traditional search results with AI processing.
-
-Modular Architecture: Easily extensible using Flask blueprints.
-
-Dual Search Functionality: Separate endpoints for document and video searches.
-
-External API Integration: Utilizes duckduckgo-search for querying external data sources.
-
+Both endpoints combine search results from DuckDuckGo with AI processing to deliver more accurate and relevant responses.
 
 
 ---
 
-#Tech Stack
+<h1 ✨ Features >
 
-Backend Framework: Flask
-
-HTTP Client: requests
-
-Search Engine: duckduckgo-search
-
-Programming Language: Python 3.x
-
-
+✅ AI-Enhanced Search: Merges traditional search results with AI-driven processing for improved accuracy.
+✅ Modular Architecture: Built using Flask blueprints, making it easy to extend.
+✅ Dual Search Functionality: Separate API endpoints for document and video searches.
+✅ External API Integration: Uses duckduckgo-search to query external data sources.
 
 ---
 
-#Installation
+<h1 📥 Installation >
 
-1. Clone the repository:
+<h3 1. Clone the repository: >
 
 git clone https://github.com/xbyit/Ai_search.git
 cd Ai_search
 
 
-2. Install dependencies:
+<h3 2. Install dependencies:>
 
-Make sure you have Python 3 installed. Then, run:
+Ensure Python 3 is installed, then run:
 
 pip install -r requirements.txt
 
-The requirements.txt includes:
+Dependencies in requirements.txt:
 
 Flask==3.0.0
 requests==2.31.0
@@ -105,13 +83,13 @@ duckduckgo-search==4.3
 
 ---
 
-#Configuration
+<h1 ⚙️ Configuration>
 
-Before running the application, update your configuration settings in config.py:
+Before running the application, update the configuration settings in config.py:
 
 DEBUG: Set to True for development, False for production.
 
-SEARCH_API_URL: URL of the external search API.
+SEARCH_API_URL: URL of the external search engine.
 
 AI_API_URL: URL of the AI processing service.
 
@@ -119,68 +97,69 @@ AI_API_URL: URL of the AI processing service.
 
 ---
 
-#Usage
+<h1 🚀 Usage>
 
-Start the application by running:
+To start the application, run:
 
 python app.py
 
-The server will start on http://0.0.0.0:5000.
+The server will be available at:
+http://0.0.0.0:5000
 
 
 ---
 
-#API Endpoints
+<h1 📡 API Endpoints>
 
-Document Search
+<h3 🔍 Document Search>
 
-Endpoint: /api/search/Document
+Endpoint: /api/search/document
 
 Method: POST
 
-Description: Accepts a JSON payload with a query string to fetch and enhance document search results.
+Description: Accepts a JSON payload with a query string and returns AI-enhanced document search results.
 
-Request Example:
+
+📤 Request:
 
 {
   "query": "example search term"
 }
 
-Response Example:
+📥 Response:
 
 {
-  "resulte": "AI processed search result"
+  "result": "AI processed search result"
 }
 
-
-Video Search
+<h3 🎥 Video Search>
 
 Endpoint: /api/search/video
 
 Method: POST
 
-Description: Accepts a JSON payload with a query string to fetch and enhance video search results.
+Description: Accepts a JSON payload with a query string and returns AI-enhanced video search results.
 
-Request Example:
+
+📤 Request:
 
 {
   "query": "example video search term"
 }
 
-Response Example:
+📥 Response:
 
 {
-  "resulte": "AI processed search result"
+  "result": "AI processed search result"
 }
 
-
-For further details, please review api_routes.py.
+📌 For more details, refer to routes/api_routes.py.
 
 
 ---
 
-Project Structure
-
+<h2 📂 Project Structure>
+'''
 Ai_search/
 ├── app.py                # Main application file initializing Flask and registering blueprints
 ├── config.py             # Application configuration settings
@@ -190,156 +169,29 @@ Ai_search/
     ├── search_service.py # Integration with external search APIs (DuckDuckGo)
     └── ai_service.py     # AI processing of search results
 
+'''
+---
+
+<h1 🤝 Contributing >
+
+Contributions are welcome! If you find an issue or have an enhancement proposal, please open an issue or submit a pull request.
+
 
 ---
 
-Contributing
-
-Contributions are welcome! To report issues or propose enhancements, please open an issue or submit a pull request.
-
-
----
-
-License
+<h1 📜 License >
 
 This project is open source. See the LICENSE file for more details.
 
 
 ---
 
-Contact
+<h1 📧 Contact >
 
-For any questions or further information, please contact the maintainer:
+For questions or further information, contact the maintainer:
 
-Email: your-email@example.com
+📩 Telegram: https://t.me/XTOOLPYCHAT
 
 
 ---
-
-This README provides a concise yet comprehensive overview of the Ai_search project, mirroring the professional style seen in the User-Auth-Backend repository.
-
-
-Modular Design: Built using Flask blueprints and service layers for ease of maintenance and extensibility.
-
-
-Getting Started
-
-Prerequisites
-
-Python 3.x
-
-pip (Python package installer)
-
-Internet connection for API calls
-
-
-Installation
-
-1. Clone the repository:
-
-git clone https://github.com/xbyit/Ai_search.git
-cd Ai_search
-
-
-2. Install required dependencies:
-
-If a requirements.txt file is available, run:
-
-pip install -r requirements.txt
-
-Otherwise, ensure that at minimum Flask is installed:
-
-pip install Flask
-
-
-
-Configuration
-
-The application settings are managed in the config.py file. Update the configuration values as needed:
-
-DEBUG: Set to True for development or False for production.
-
-SEARCH_API_URL: URL endpoint for the external search API.
-
-AI_API_URL: URL endpoint for the AI processing service.
-
-
-Refer to config.py for the current configuration.
-
-Running the Application
-
-Run the application using the following command:
-
-python app.py
-
-The server will start on http://0.0.0.0:5000.
-
-API Endpoints
-
-Document Search
-
-Endpoint: /api/search/Document
-
-Method: POST
-
-Description: Submits a search query to fetch document-related results. The query is processed via the external search API and refined using an AI service.
-
-Request Payload Example:
-
-{
-  "query": "your search term"
-}
-
-Response Example:
-
-{
-  "resulte": "AI processed response based on search results"
-}
-
-
-Video Search
-
-Endpoint: /api/search/video
-
-Method: POST
-
-Description: Submits a search query to fetch video-related results. Similar to document search, results are enhanced using the AI service.
-
-Request Payload Example:
-
-{
-  "query": "your video search term"
-}
-
-Response Example:
-
-{
-  "resulte": "AI processed response based on video search results"
-}
-
-
-Refer to api_routes.py for detailed endpoint implementation.
-
-Project Structure
-
-Ai_search/
-├── app.py                # Main application file that initializes Flask and registers blueprints
-├── config.py             # Configuration settings for API endpoints and debugging options
-├── routes/
-│   └── api_routes.py     # API route definitions for document and video search
-└── services/
-    ├── search_service.py # Service functions to interface with external search APIs
-    └── ai_service.py     # Service functions to handle AI processing of search results
-
-Contributing
-
-Contributions are welcome! If you have suggestions for improvements or encounter issues, please open an issue or submit a pull request.
-
-License
-
-This project is open-source. Please refer to the LICENSE file for more details.
-
-Contact
-
-For additional information or inquiries, please contact the project maintainer at [https://t.me/XTOOLPYCHAT].
 
