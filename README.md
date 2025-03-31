@@ -19,7 +19,7 @@ Ai_search is a Flask-based backend application designed to enhance search result
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
-- [update](#update.md)
+- [update](https://github.com/xbyit/Ai_search/blob/master/Update.md)
 ---
 
 ## 📖 Overview
