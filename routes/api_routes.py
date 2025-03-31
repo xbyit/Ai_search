@@ -4,7 +4,7 @@ from services.search_service import search_duckduckgo_video
 from services.ai_service import web_ai
 
 api = Blueprint('api', __name__)
-@api.route('/api/search/Document',methods=['POST'])
+@api.route('/api/search/document',methods=['POST'])
 def api_search_Document():
     data = request.json
     query = data.get('query')
